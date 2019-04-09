@@ -1,34 +1,52 @@
-# Find Security Bugs [![Build Status](https://secure.travis-ci.org/find-sec-bugs/find-sec-bugs.png?branch=master)](http://travis-ci.org/find-sec-bugs/find-sec-bugs) [![Coverage Status](https://coveralls.io/repos/find-sec-bugs/find-sec-bugs/badge.png?branch=master)](https://coveralls.io/r/find-sec-bugs/find-sec-bugs?branch=master) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.h3xstream.findsecbugs/findsecbugs-plugin/badge.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.h3xstream.findsecbugs%22%20a%3A%22findsecbugs-plugin%22) [![Dependency Status](https://www.versioneye.com/user/projects/5751d1e07757a00041b3a1dd/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5751d1e07757a00041b3a1dd)
+# Forked of the find-sec-bugs project
+This fork attempts to add Java OpenJDK defects to the list of current bug patterns for memory errors detection
 
-Find Security Bugs is the [FindBugs](http://findbugs.sourceforge.net/) plugin for security audits of Java web applications.
+# List of Added JVM Defects
 
-Website : http://find-sec-bugs.github.io/
+/plugin/src/test/java/testcode/EADataCorruption.java
 
-## Main developers
+/plugin/src/test/java/testcode/JDK6367889.java
 
- - [Philippe Arteau](https://github.com/h3xstream) from [GoSecure](https://github.com/gosecure)
- - [David Formánek](https://github.com/formanek)
+/plugin/src/test/java/testcode/JDK6795161.java
 
-## Notable contributions
+/plugin/src/test/java/testcode/JDK6799693.java
 
- - [David Formánek](https://github.com/formanek)
-   - Major improvements and refactoring on the taint analysis for injections.
-   - The creation of a detector for hard coded passwords and cryptographic keys.
- - [Tomáš Polešovský](https://github.com/topolik)
-   - Improvements and bug fixes related to the taint analysis.
- - [Maxime Nadeau](https://github.com/MaxNad)
-   - New detectors surrounding the Play Framework and improvements related to Scala.
- - [Naoki Kimura](https://github.com/naokikimura)
-   - Detector for [injection in custom API](http://h3xstream.github.io/find-sec-bugs/bugs.htm#CUSTOM_INJECTION)
-   - Translation of [messages in Japanese](http://h3xstream.github.io/find-sec-bugs/bugs_ja.htm)
- - [Dave Wichers](https://github.com/davewichers)
-   - Improvement to vulnerability descriptions
+/plugin/src/test/java/testcode/JDK6914126.java
 
-## Project Sponsors
+/plugin/src/test/java/testcode/JDK7013538.java
 
-The development of Find Security Bugs is supported by [GoSecure](https://github.com/gosecure) since 2016. The support includes the development of new detectors and the research for new vulnerability classes.
+/plugin/src/test/java/testcode/JDK8049107.java
 
-![GoSecure Logo](website/out_web/images/gosecure.png)
+/plugin/src/test/java/testcode/JDK8067258.java
+
+/plugin/src/test/java/testcode/JDK8086046.java
+
+/plugin/src/test/java/testcode/JDK8130847.java
+
+# Eclipse Setup Instructions
+
+https://github.com/find-sec-bugs/find-sec-bugs/wiki/Eclipse-Tutorial
+
+# Compiling Instructions
+
+https://github.com/find-sec-bugs/find-sec-bugs/wiki/Compiling
+
+1- Clone project
+
+2- Run maven: In Eclipse -> /plugin/pom.xml -> Run As -> Run Configuration -> [Goals: clean install -Dlicense.skip=true] -> Run
+
+3- After build is successful, copy generated plugin jar from /plugin/target folder to any folder
+
+4- Add generated jar to Eclipse SpotBugs plugin from the Eclipse -> Window -> Preferences -> SpotBugs -> 'Plugins and misc. Settings' tab
+
+5- Verify new detectors are added to the 'Detector Configuration' tab
+
+6- Scan Code using the improved Plugin with new detectors 
+
+
+# Link to SpotBugs Manual
+
+https://spotbugs.readthedocs.io/en/stable/
 
 ## Screenshots
 

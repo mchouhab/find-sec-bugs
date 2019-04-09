@@ -8,6 +8,156 @@
         <BugsUrl>http://find-sec-bugs.github.io/bugs.htm</BugsUrl>
         <AllBugsUrl>http://find-sec-bugs.github.io/bugs.htm</AllBugsUrl>
     </Plugin>
+    
+    <!--  CS Course Demo -->
+        <!-- JVM Memory -->
+    <Detector class="com.h3xstream.findsecbugs.EADataCorruptionDetector">
+        <Details>Software Security - JVM Memory Errors Detection</Details>
+    </Detector>
+    <BugPattern type="JVM_MEMORY">
+        <ShortDescription>JVM Escape Analysis Data Corruption</ShortDescription>
+        <LongDescription>>Software Security - Data corruption issue caused by the escape analysis feature in the Java JVM</LongDescription>
+        <Details>
+            <![CDATA[
+<p>
+    The JVM can suffer from a data corruption resulting from the Escape Analysis feature in certain Java versions.</br>
+    This issue appears to affect Java version 6 and Java version 7.</br>
+    Might want to review version of Java used to run this code and fix any issues in accordance with details reported in the Java Bug Tracking System.</br>
+    Bug Link: https://bugs.openjdk.java.net/browse/JDK-6795161</br>
+</p>
+
+            ]]>
+        </Details>
+    </BugPattern>
+    <BugCode abbrev="JMEM">JDK6367889</BugCode>
+    
+    <!-- JVM Memory S-->
+        <Detector class="com.h3xstream.findsecbugs.JDK6367889Detector">
+        <Details>Software Security - JVM Memory Errors Detection</Details>
+    </Detector>
+    <BugPattern type="JVM_MEMORY1">
+        <ShortDescription>JVM Escape Analysis Bug</ShortDescription>
+        <LongDescription>>JVM Escape Analysis Bug</LongDescription>
+        <Details>
+            <![CDATA[<p>Problem ID: JDK6367889</p> ]]>
+        </Details>
+    </BugPattern>
+    <BugCode abbrev="JMEM">EA Memory Errors - JDK6367889</BugCode>
+    <!-- JVM Memory E-->
+    
+    <!-- JVM Memory S-->
+        <Detector class="com.h3xstream.findsecbugs.JDK6795161Detector">
+        <Details>Software Security - JVM Memory Errors Detection</Details>
+    </Detector>
+    <BugPattern type="JVM_MEMORY2">
+        <ShortDescription>JVM Escape Analysis Bug</ShortDescription>
+        <LongDescription>>JVM Escape Analysis Bug</LongDescription>
+        <Details>
+            <![CDATA[<p>Problem ID: JDK6795161</p> ]]>
+        </Details>
+    </BugPattern>
+    <BugCode abbrev="JMEM">EA Memory Errors - JDK6795161</BugCode>
+    <!-- JVM Memory E-->
+    
+    <!-- JVM Memory S-->
+        <Detector class="com.h3xstream.findsecbugs.JDK6799693Detector">
+        <Details>Software Security - JVM Memory Errors Detection</Details>
+    </Detector>
+    <BugPattern type="JVM_MEMORY3">
+        <ShortDescription>JVM Escape Analysis Bug</ShortDescription>
+        <LongDescription>>JVM Escape Analysis Bug</LongDescription>
+        <Details>
+            <![CDATA[<p>Problem ID: JDK6799693</p> ]]>
+        </Details>
+    </BugPattern>
+    <BugCode abbrev="JMEM">EA Memory Errors - JDK6799693</BugCode>
+    <!-- JVM Memory E-->    
+    
+        <!-- JVM Memory S-->
+        <Detector class="com.h3xstream.findsecbugs.JDK6914126Detector">
+        <Details>Software Security - JVM Memory Errors Detection</Details>
+    </Detector>
+    <BugPattern type="JVM_MEMORY4">
+        <ShortDescription>JVM Escape Analysis Bug</ShortDescription>
+        <LongDescription>>JVM Escape Analysis Bug</LongDescription>
+        <Details>
+            <![CDATA[<p>Problem ID: JDK6914126</p> ]]>
+        </Details>
+    </BugPattern>
+    <BugCode abbrev="JMEM">EA Memory Errors - JDK6914126</BugCode>
+    <!-- JVM Memory E--> 
+    
+            <!-- JVM Memory S-->
+        <Detector class="com.h3xstream.findsecbugs.JDK7013538Detector">
+        <Details>Software Security - JVM Memory Errors Detection</Details>
+    </Detector>
+    <BugPattern type="JVM_MEMORY5">
+        <ShortDescription>JVM Escape Analysis Bug</ShortDescription>
+        <LongDescription>>JVM Escape Analysis Bug</LongDescription>
+        <Details>
+            <![CDATA[<p>Problem ID: JDK7013538</p> ]]>
+        </Details>
+    </BugPattern>
+    <BugCode abbrev="JMEM">EA Memory Errors - JDK7013538</BugCode>
+    <!-- JVM Memory E--> 
+    
+            <!-- JVM Memory S-->
+        <Detector class="com.h3xstream.findsecbugs.JDK8049107Detector">
+        <Details>Software Security - JVM Memory Errors Detection</Details>
+    </Detector>
+    <BugPattern type="JVM_MEMORY6">
+        <ShortDescription>JVM Escape Analysis Bug</ShortDescription>
+        <LongDescription>>JVM Escape Analysis Bug</LongDescription>
+        <Details>
+            <![CDATA[<p>Problem ID: JDK8049107</p> ]]>
+        </Details>
+    </BugPattern>
+    <BugCode abbrev="JMEM">EA Memory Errors - JDK8049107</BugCode>
+    <!-- JVM Memory E--> 
+    
+            <!-- JVM Memory S-->
+        <Detector class="com.h3xstream.findsecbugs.JDK8067258Detector">
+        <Details>Software Security - JVM Memory Errors Detection</Details>
+    </Detector>
+    <BugPattern type="JVM_MEMORY7">
+        <ShortDescription>JVM Escape Analysis Bug</ShortDescription>
+        <LongDescription>>JVM Escape Analysis Bug</LongDescription>
+        <Details>
+            <![CDATA[<p>Problem ID: JDK8067258</p> ]]>
+        </Details>
+    </BugPattern>
+    <BugCode abbrev="JMEM">EA Memory Errors - JDK8067258</BugCode>
+    <!-- JVM Memory E--> 
+    
+   <!-- JVM Memory S-->
+        <Detector class="com.h3xstream.findsecbugs.JDK8086046Detector">
+        <Details>Software Security - JVM Memory Errors Detection</Details>
+    </Detector>
+    <BugPattern type="JVM_MEMORY8">
+        <ShortDescription>JVM Escape Analysis Bug</ShortDescription>
+        <LongDescription>>JVM Escape Analysis Bug</LongDescription>
+        <Details>
+            <![CDATA[<p>Problem ID: JDK8086046</p> ]]>
+        </Details>
+    </BugPattern>
+    <BugCode abbrev="JMEM">EA Memory Errors - JDK8086046</BugCode>
+    <!-- JVM Memory E--> 
+    
+       <!-- JVM Memory S-->
+        <Detector class="com.h3xstream.findsecbugs.JDK8130847Detector">
+        <Details>Software Security - JVM Memory Errors Detection</Details>
+    </Detector>
+    <BugPattern type="JVM_MEMORY9">
+        <ShortDescription>JVM Escape Analysis Bug</ShortDescription>
+        <LongDescription>>JVM Escape Analysis Bug</LongDescription>
+        <Details>
+            <![CDATA[<p>Problem ID: JDK8130847</p> ]]>
+        </Details>
+    </BugPattern>
+    <BugCode abbrev="JMEM">EA Memory Errors - JDK8130847</BugCode>
+    <!-- JVM Memory E--> 
+    
+    
 
     <!-- Predictable Pseudo Random Generator (PRG) -->
     <Detector class="com.h3xstream.findsecbugs.PredictableRandomDetector">
